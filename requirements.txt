@@ -1,0 +1,8 @@
+flask
+flask_wtf
+imantics
+segmentation_models_pytorch
+opencv-python
+torch
+matplotlib
+imageio
