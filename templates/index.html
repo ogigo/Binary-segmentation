@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Upload App</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" />
+            <button type="submit">Upload Image</button>
+        </form>
+        {% if original_image %}
+            <div id="imageContainer">
+                <h2>Original Image</h2>
+                <img src="data:image/png;base64,{{ original_image }}" alt="Original Image">
+            </div>
+        {% endif %}
+        {% if processed_image %}
+            <div id="processedImageContainer">
+                <h2>Processed Image (Black and White)</h2>
+                <img src="data:image/png;base64,{{ processed_image }}" alt="Processed Image">
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html> 
