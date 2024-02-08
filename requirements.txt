@@ -6,3 +6,5 @@ opencv-python
 torch
 matplotlib
 imageio
+scikit-learn==1.4.0
+albumentations==1.3.1
