@@ -1,4 +1,3 @@
-import torch
 import segmentation_models_pytorch as smp
 
 model = smp.Unet(
@@ -7,6 +6,3 @@ model = smp.Unet(
     in_channels=3,
     classes=1,
 )
-
-state_dict=torch.load("last_model.pt",map_location=torch.device('cpu'))
-model.load_state_dict(state_dict["model_state_dict"])
